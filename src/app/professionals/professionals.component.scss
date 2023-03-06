@@ -1,0 +1,77 @@
+.butStyle{
+    background-color: red !important;
+     color: white !important;
+  }
+  form{
+    .unorderlist{
+      list-style-type: none;
+      padding-left:0px;
+      .userdataspacingname{
+        padding-left:130px;
+      }
+      .userdataspacingdomain{
+        padding-left:115px;
+      }
+      .userdataspacinggender{
+        padding-left:120px;
+      }
+      .userdataspacingdate{
+        padding-left:78px;
+      }
+      .userdataspacingnumber{
+        padding-left:66px;
+      } .userdataspacinglocation{
+        padding-left:110px;
+      }
+    }
+  }
+  .business{
+    background-color: #ccff99;
+    padding-left:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  
+  
+  
+  .styleofbussiness{
+    width:100%;
+    .businesscard{
+      // padding:0px 10px 10px 10px;
+      .card-header{
+        padding:10px;
+        border-bottom: none!important;
+      }
+      .businesscardbody{
+        border:2px ridge ;
+       
+        margin:10px 10px 30px 10px;
+        padding:5px 10px 30px 10px;
+        .bussinesscardtitle{
+  padding-right:10px;
+        }
+      }
+    }
+    .profile-flex{
+      display: flex;
+      justify-content:space-between;
+    }
+  }
+  
+  .profesionals{
+    display: flex;
+    .card-section{
+      .card{
+        .card-header,.card-footer{
+          background-color:#fff;
+        }
+        .card-header{
+          border-bottom: none !important;
+        }
+        padding:20px;
+        justify-items: center;
+      }
+    }
+    
+  }
+  

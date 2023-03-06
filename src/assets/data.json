@@ -1,0 +1,35 @@
+[  
+  {  
+    "id": 1,  
+    "name": "Jack",  
+    "domain": "developer",  
+    "gender": "1",
+    "datePicker":"3/5/2023",
+    "number":1233434343,
+    "location":"miypur hyd 500049" 
+  },  
+  {  
+    "id": 2,  
+    "name": "Peter",  
+    "email": "peter@gmail.com",  
+    "gender": "male"  
+  },  
+  {  
+    "id": 3,  
+    "name": "Mary",  
+    "email": "mary@gmail.com",  
+    "gender": "female"  
+  },  
+  {  
+    "id": 4,  
+    "name": "Smith",  
+    "email": "smith@gmail.com",  
+    "gender": "male"  
+  },  
+  {  
+    "id": 5,  
+    "name": "John",  
+    "email": "john@gmail.com",  
+    "gender": "male"  
+  }  
+]  

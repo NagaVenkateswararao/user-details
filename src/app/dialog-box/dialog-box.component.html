@@ -1,0 +1,73 @@
+<mat-dialog-content class="mat-typography windowStyle">
+  <div style="margin-left:20px;">
+    <div class="example-container">
+      <h2>Edit Profile</h2>
+      <form [formGroup]="userFormGroup" (ngSubmit)="onSubmit(userFormGroup.value)" class="example-form">
+        <!-- name -->
+        <p>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+            <mat-error *ngIf="checkError('name', 'required')">Name is required</mat-error>
+            <mat-error *ngIf="checkError('name', 'minlength')"> Name should be more than 5 characters
+            </mat-error>
+            <mat-error *ngIf="checkError('name', 'maxlength')"> Name should be less than 20 characters
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <!-- Domain -->
+        <p>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Domain</mat-label>
+            <input matInput formControlName="domain">
+            <mat-error *ngIf="checkError('domain', 'required')">Domain is required</mat-error>
+          </mat-form-field>
+        </p>
+        <!-- Gender -->
+        <p>
+          <mat-radio-group aria-label="Select an option" formControlName="gendar">
+            <mat-radio-button value="1">Male </mat-radio-button>
+            <mat-radio-button value="2">Female</mat-radio-button>
+          </mat-radio-group>
+        </p>
+        <!-- Date of Birth -->
+        <p>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="datePicker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="checkError('datePicker', 'required')">Date of Birth is required</mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="number" maxlength="13" (keypress)="numbersonly($event)">
+            <mat-error *ngIf="checkError('number', 'required')">Phone Number is required</mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>location</mat-label>
+            <textarea matInput formControlName="location"></textarea>
+            <mat-error *ngIf="checkError('location', 'required')">location is required</mat-error>
+            <mat-error *ngIf="checkError('location', 'maxlength')">location should be less than 200 characters
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <!-- <p>
+          <img mat-card-sm-image>
+        </p> -->
+        <button mat-button type="submit" class="butStyle" (click)="update()">save</button>&nbsp; 
+        <button mat-button mat-dialog-close class="butStyle">Cancel</button>
+      </form>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+
+</mat-dialog-actions>
